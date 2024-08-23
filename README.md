@@ -51,7 +51,3 @@ Kart okutulduğunda, kullanıcıya LED'ler ve buzzer ile görsel ve işitsel ger
 - Projeyi başlattıktan sonra, RFID kartlarınızı MFRC522 okuyucuya okutabilirsiniz.
 - 💡 LED'ler ve 🔊 buzzer, başarılı kart okuma işlemlerinde size geri bildirim sağlayacaktır.
 - 🛑 Özel kart (seri numarası: 977716643) okutulduğunda, tüm kayıtlar silinecek ve sistem yeniden başlatılacaktır.
-
-## 📄 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakınız.
