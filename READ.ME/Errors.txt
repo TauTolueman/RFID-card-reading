@@ -1,0 +1,39 @@
+////////////////////////ERRORS///////////////////////
+
+1)CmakeList. Bu çok önemli compile edilecek kaynak 
+dosyalarının bu listede tanımlı olması lazım.
+
+2)
+Error:  #Guru Meditation Error: Core 0 panic'ed (Stack protection fault)#
+
+Çözüm1: header dosyasında i2c'nin default olarak tanımlanan depolama 
+değerleri var onları oynayarak 
+((#define RC522_DEFAULT_TASK_STACK_SIZE (4 * 32768)) 
+normalde 32768 yerinde 1024 vardı fakat 1024*4 bytelık alanım 
+varken 20 data saklıyordum şuanda 200 datayı sorunsuz saklayabiliyorum.)
+uygun değeri uygulamanız lazım. Elinizdeki verinin 
+büyüklüğüne göre deneme yanılmayla da yapabilirsiniz.
+
+Çözüm2: 
+//Log warning: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+bu uyarı verilmiş sürücünüzü güncelleyerek bu sorunu 
+halledebileceğinizi söylüyor ama ben başarılı olamadım.
+
+
+3)Bir diğer sorun yeterli depolama alanı olmaması.
+Partition table da default olarak 24kb lik alan ayrılmış 
+bu alanı benim kartım 8mb ye kadar destekliyor 
+fakat ben 4mb'nin bana fazlasıyla yeteceğini düşündüm.
+esp-idf cmd ye girip oradan projenizi uzantısını alıp
+"cd c:/xxxxxxxxxxx/xxxxxxxxxx/xxxxxxx" kodunu çalıştırmanız lazım
+çalıştırdıktan sonra "idf.py menuconfig" yazıp oradan
+"partition table ---> custom partition table ---> custom partition table CSV"
+yi açtıktan sonra bir partition.csv dosyası oluşturup oradan NVS'nin depolamasını
+istediğiniz gibi oynayabilirsiniz.
+ayrıca bu dediğimi hiç cmd açmadan direkt Esp-ide programını açıp sdkconfig
+arayüzüne girip partition table yazarak yine ulaşabilirsiniz.
+
+
+
+4) spi ın pinlerini kartınızla doğru bir şekilde 
+optimize ettiğinizden emin olmanız lazım.
