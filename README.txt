@@ -1,27 +1,28 @@
-	Espressif firmasının ESP32 C6 DEV-KIT1 kartıyla geliştirdiğimiz bu projede 
-Bir adet ESP32 C6 DEV-KIT1 kartı,
-Bir adet MFRC522 rfid kart okuyucu,
-İki adet LED,
-Bir adet buzzer kullanılmıştır.
-	
-	Projenin amacı MFRC522 rfid kart okuyucumuza okuttuğumuz kartların seri numarasını ve 
-gerçek saate göre ne zaman okuttuğumuz bilgisini kaydetmektir.
-Gerçek saati ayarlarken, ESP32 kartının WIFI kütüphanesi sayesinde istediğimiz wifi ağına bağlanıp istediğimiz konumun uydu saatini kullanıyoruz.
-Kart okuturken çeşitli kurallarımız var. 
-Örneğin: 
-Okuttuğumuz bir kartı 5 dakika içinde bir daha okutursak o kartın verisi kaydedilmiyor ve kullanıcı uyarılıyor.(İstediğimiz şekilde bu süreyi konfigüre edebiliyoruz.)
-Özel olarak tanımladığımız kartı (Beyaz kart seri numarası: 977716643) okuttuğumuzda ise bütün kayıtlı verileri silip sistemi yeniden başlatıyor.
-(İstediğimiz şekilde özel kartı konfigüre edebiliyoruz)
+# 🚀 ESP32 C6 RFID Kart Okuyucu Projesi
 
-Ayrıca buzzer ve LED'lerle özel çıkışları anlamlandırdık.
-Her kart okuttuğumuzda buzzer ve LED'lerle kullanıcıya mesaj veriyoruz.
+Bu proje, ESP32 C6 DEV-KIT1 kartı kullanılarak MFRC522 RFID kart okuyucu, LED'ler ve bir buzzer ile kartların seri numaralarını ve okutulma zamanlarını kaydetmek amacıyla geliştirilmiştir.
 
+## 📦 Proje Bileşenleri
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+- **ESP32 C6 DEV-KIT1**
+- **MFRC522 RFID Kart Okuyucu**
+- **2 adet LED**
+- **1 adet Buzzer**
 
-				     Pin layouts
+## 🎯 Proje Amacı
 
-//////////////////////////////////////MFRC522//////////////////////////////////////
+Bu proje, MFRC522 RFID kart okuyucusu ile okutulan kartların seri numaralarını ve gerçek saat bilgilerini kaydetmek için tasarlanmıştır. Gerçek saat bilgisi, ESP32'nin Wi-Fi bağlantısı üzerinden konumun uydu saatine erişilerek ayarlanmaktadır.
+
+### 🔒 Kart Okuma Kuralları
+
+- Bir kart 5 dakika içerisinde tekrar okutulursa, bu kartın verisi kaydedilmez ve kullanıcı uyarılır. (Bu süre konfigüre edilebilir.)
+- 🛡️ Özel olarak tanımlanan bir kart (Beyaz kart seri numarası: 977716643) okutulduğunda, bütün kayıtlı veriler silinir ve sistem yeniden başlatılır. (Özel kart tanımlaması konfigüre edilebilir.)
+
+### 💡 Buzzer ve LED Kullanımı
+
+Kart okutulduğunda, kullanıcıya LED'ler ve buzzer ile görsel ve işitsel geri bildirimler sağlanır.
+
+## 🛠️ Pin Düzeni
 
 	MFRC522                ESP32C6             LED's and BUZZER
 
@@ -38,7 +39,19 @@ Her kart okuttuğumuzda buzzer ve LED'lerle kullanıcıya mesaj veriyoruz.
 	///////		       GPIO_15             BUZZER
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+## 🧩 Kurulum
 
+1. **ESP-IDF Kurulumu:** ESP32 C6 için ESP-IDF ortamını kurun.
+2. **Kodun Yüklenmesi:** Proje dosyalarını ESP32 C6 kartına yükleyin.
+3. **Wi-Fi Ayarları:** Projedeki Wi-Fi ayarlarını kendi ağınıza göre yapılandırın.
+4. **Çalıştırma:** Kartı çalıştırın ve RFID kartları okutun.
 
+## ⚙️ Kullanım
 
+- Projeyi başlattıktan sonra, RFID kartlarınızı MFRC522 okuyucuya okutabilirsiniz.
+- 💡 LED'ler ve 🔊 buzzer, başarılı kart okuma işlemlerinde size geri bildirim sağlayacaktır.
+- 🛑 Özel kart (seri numarası: 977716643) okutulduğunda, tüm kayıtlar silinecek ve sistem yeniden başlatılacaktır.
+
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakınız.
