@@ -22,9 +22,9 @@ Bu proje, MFRC522 RFID kart okuyucusu ile okutulan kartların seri numaraların�
 
 Kart okutulduğunda, kullanıcıya LED'ler ve buzzer ile görsel ve işitsel geri bildirimler sağlanır.
 
-<div align="center">
-  ![Screenshot 2024-08-16 104103](https://github.com/user-attachments/assets/938a5af7-d2cf-4ad5-aeaf-e53c35e3b4b9)
-</div>
+
+
+  ![Screensho](https://github.com/user-attachments/assets/938a5af7-d2cf-4ad5-aeaf-e53c35e3b4b9)
 
 ## 🛠️ Pin Düzeni
 
