@@ -56,5 +56,6 @@ Kart okutulduğunda, kullanıcıya LED'ler ve buzzer ile görsel ve işitsel ger
 - 💡 LED'ler ve 🔊 buzzer, başarılı kart okuma işlemlerinde size geri bildirim sağlayacaktır.
 - 🛑 Özel kart (seri numarası: 977716643) okutulduğunda, tüm kayıtlar silinecek ve sistem yeniden başlatılacaktır.
 
-## Teşekkürler 
--Bartu Arın OBA ve Yusuf Yeniçeri'ye yardımları için ayrıca teşekkürlerimi sunuyorum.
+
+## 🎦 YouTube video linki
+https://youtu.be/3Y2tAWSvxYA?feature=shared
