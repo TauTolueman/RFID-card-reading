@@ -2,6 +2,9 @@
 
 Bu proje, ESP32 C6 DEV-KIT1 kartı kullanılarak MFRC522 RFID kart okuyucu, LED'ler ve bir buzzer ile kartların seri numaralarını ve okutulma zamanlarını kaydetmek amacıyla geliştirilmiştir.
 
+## 🎦 YouTube video linki
+[https://youtu.be/3Y2tAWSvxYA?feature=shared](https://youtu.be/ySqlOAOxu5U)
+
 ## 📦 Proje Bileşenleri
 
 - **ESP32 C6 DEV-KIT1**
@@ -55,7 +58,3 @@ Kart okutulduğunda, kullanıcıya LED'ler ve buzzer ile görsel ve işitsel ger
 - Projeyi başlattıktan sonra, RFID kartlarınızı MFRC522 okuyucuya okutabilirsiniz.
 - 💡 LED'ler ve 🔊 buzzer, başarılı kart okuma işlemlerinde size geri bildirim sağlayacaktır.
 - 🛑 Özel kart (seri numarası: 977716643) okutulduğunda, tüm kayıtlar silinecek ve sistem yeniden başlatılacaktır.
-
-
-## 🎦 YouTube video linki
-https://youtu.be/3Y2tAWSvxYA?feature=shared
